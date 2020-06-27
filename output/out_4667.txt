@@ -1,0 +1,95 @@
+Logs for PID: 4667
+====================================
+
+FATAL EXCEPTION
+==================
+
+Exception Message| # of Occurrences
+java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState| 2
+java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+
+Stacktrace:
+==================
+
+#1) java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+     at android.support.v4.app.FragmentManagerImpl.checkStateLoss(Unknown Source:10)
+     at android.support.v4.app.FragmentManagerImpl.enqueueAction(Unknown Source:2)
+     at android.support.v4.app.BackStackRecord.a(Unknown Source:78)
+     at android.support.v4.app.BackStackRecord.commit(Unknown Source:1)
+     at glance.ui.sdk.activity.GlanceHomeActivity.showBingeContainer(Unknown Source:19)
+     at glance.ui.sdk.activity.GlanceHomeActivity.e(Unknown Source:0)
+     at glance.ui.sdk.activity.GlanceHomeActivity$3.onTabSelected(Unknown Source:30)
+     at android.support.design.widget.TabLayout.dispatchTabSelected(Unknown Source:19)
+     at android.support.design.widget.TabLayout.a(Unknown Source:55)
+     at android.support.design.widget.TabLayout.a(Unknown Source:1)
+     at android.support.design.widget.TabLayout$Tab.select(Unknown Source:14)
+     at android.support.design.widget.TabLayout$TabView.performClick(Unknown Source:16)
+     at android.view.View.performClickInternal(View.java:6585)
+     at android.view.View.access$3100(View.java:785)
+     at android.view.View$PerformClick.run(View.java:25921)
+     at android.os.Handler.handleCallback(Handler.java:873)
+     at android.os.Handler.dispatchMessage(Handler.java:99)
+     at android.os.Looper.loop(Looper.java:201)
+     at android.app.ActivityThread.main(ActivityThread.java:6810)
+     at java.lang.reflect.Method.invoke(Native Method)
+     at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:547)
+     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:873)
+#2) java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available
+
+
+Errors
+==================
+
+Error Message| # of Occurrences
+AndroidRuntime:        at android.view.View$PerformClick.run(View.java:25921)| 2
+AndroidRuntime:        at android.os.Handler.handleCallback(Handler.java:873)| 2
+AndroidRuntime:        at android.view.View.performClickInternal(View.java:6585)| 2
+AndroidRuntime:        at android.view.View.access$3100(View.java:785)| 2
+AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:99)| 2
+ActivityThread: Failed to find provider info for com.miui.systemui.keyguard.wallpaper| 1
+AndroidRuntime:        at android.support.design.widget.TabLayout$Tab.select(Unknown Source:14)| 2
+AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:6810)| 2
+AndroidRuntime: Process: com.miui.android.fashiongallery, PID: 4667| 3
+AndroidRuntime:        at android.support.v4.app.BackStackRecord.a(Unknown Source:78)| 2
+AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity$3.onTabSelected(Unknown Source:30)| 2
+System  : Uncaught exception thrown by finalizer| 1
+AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:873)| 2
+AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:1)| 2
+AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:55)| 2
+System  : java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+GraphicsJNI: *** Uncaught exception returned from Java call!| 2
+AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.checkStateLoss(Unknown Source:10)| 2
+AndroidRuntime: java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState| 2
+AndroidRuntime:        at android.os.Looper.loop(Looper.java:201)| 2
+AndroidRuntime:        at android.support.v4.app.BackStackRecord.commit(Unknown Source:1)| 2
+AndroidRuntime: java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)| 2
+AndroidRuntime:        at android.support.design.widget.TabLayout$TabView.performClick(Unknown Source:16)| 2
+AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.enqueueAction(Unknown Source:2)| 2
+AndroidRuntime: FATAL EXCEPTION: Timer-16| 1
+AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.showBingeContainer(Unknown Source:19)| 2
+AndroidRuntime: FATAL EXCEPTION: main| 2
+AndroidRuntime:        at android.support.design.widget.TabLayout.dispatchTabSelected(Unknown Source:19)| 2
+AndroidRuntime:        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:547)| 2
+TelephonyManager: getDeviceIdjava.lang.SecurityException: getDeviceId: Neither user 10178 nor current process has android.permission.READ_PHONE_STATE.| 1
+AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.e(Unknown Source:0)| 2
+
+
+Matching Strings: WARNING,OOM,OutOfMemoryError
+=======================================================
+
+Matching String| # of Occurrences
+art     : Throwing OutOfMemoryError "Failed to allocate a 24 byte allocation with 0 free bytes and -2MB until OOM"| 2
+art     : Throwing OutOfMemoryError "Failed to allocate a 128 byte allocation with 0 free bytes and -2MB until OOM"| 1
+art     : Throwing OutOfMemoryError "Failed to allocate a 43 byte allocation with 0 free bytes and -2MB until OOM"| 2
+art     : Throwing OutOfMemoryError "Failed to allocate a 28 byte allocation with 0 free bytes and -2MB until OOM" (recursive case)| 16
+art     : Throwing OutOfMemoryError "Failed to allocate a 8204 byte allocation with 0 free bytes and -2MB until OOM"| 2
+art     : Throwing OutOfMemoryError "Failed to allocate a 12 byte allocation with 0 free bytes and -2MB until OOM"| 4
+System.err: java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+art     : JNI WARNING: java.lang.OutOfMemoryError thrown while calling printStackTrace| 3
+System  : java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+art     : Throwing OutOfMemoryError "Failed to allocate a 16 byte allocation with 0 free bytes and -2MB until OOM"| 1
+art     : Throwing OutOfMemoryError "Failed to allocate a 28 byte allocation with 0 free bytes and -2MB until OOM"| 2
+AndroidRuntime: java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available| 1
+art     : Throwing OutOfMemoryError "Failed to allocate a 32 byte allocation with 0 free bytes and -2MB until OOM"| 1
+art     : Throwing OutOfMemoryError "Failed to allocate a 56 byte allocation with 0 free bytes and -2MB until OOM"| 1

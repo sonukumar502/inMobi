@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +22,8 @@ public class Test {
 			File myObj = new File("resources/bugreport.txt");
 			Scanner myReader = new Scanner(myObj);
 			String pid = getValueFromPropertiesFile("PID");
+			PrintStream fileOut = new PrintStream("output/out_"+pid+".txt");
+			System.setOut(fileOut);
 			String srchString=getValueFromPropertiesFile("SEARCHSTRING").trim();
 			String searchString[] = srchString.split(",");
 			List<String> errorList = new ArrayList<String>();
@@ -145,10 +148,11 @@ public class Test {
 				System.out.println("No Matching Stirng for this PID!!");
 			}
 			myReader.close();
-		} catch (FileNotFoundException e) {
+			} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
+		
 	}
 
 	public static void countFrequencies(List<String> al) {

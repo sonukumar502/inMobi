@@ -1,0 +1,16 @@
+Logs for PID: 1556
+====================================
+
+FATAL EXCEPTION
+==================
+No FATAL Exceptions for this PID!!
+
+
+Errors
+==================
+No Errors for this PID!!
+
+
+Matching Strings: WARNING,OOM,OutOfMemoryError
+=======================================================
+No Matching Stirng for this PID!!
