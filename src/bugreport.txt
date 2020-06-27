@@ -204,6 +204,32 @@ Dumpstate info: id=1 pid=10466
 06-17 16:15:18.796  1566  1682 W MountService: No primary storage mounted!
 06-17 16:15:18.801  1566  1566 I SystemServiceManager: Starting com.android.server.PersistentDataBlockService
 06-17 16:15:19.066  1566  1566 I SystemServiceManager: Starting com.android.server.DeviceIdleController
+09-26 06:00:50.196  4667  4667 D AndroidRuntime: Shutting down VM
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: FATAL EXCEPTION: main
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: Process: com.miui.android.fashiongallery, PID: 4667
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.checkStateLoss(Unknown Source:10)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.enqueueAction(Unknown Source:2)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.BackStackRecord.a(Unknown Source:78)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.BackStackRecord.commit(Unknown Source:1)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.showBingeContainer(Unknown Source:19)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.e(Unknown Source:0)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity$3.onTabSelected(Unknown Source:30)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.dispatchTabSelected(Unknown Source:19)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:55)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:1)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout$Tab.select(Unknown Source:14)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout$TabView.performClick(Unknown Source:16)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View.performClickInternal(View.java:6585)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View.access$3100(View.java:785)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View$PerformClick.run(View.java:25921)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Handler.handleCallback(Handler.java:873)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:99)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Looper.loop(Looper.java:201)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:6810)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:547)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:873)
 06-17 16:15:19.069  1566  1682 W MountService: No primary storage mounted!
 06-17 16:15:19.077  1566  1566 I SystemServiceManager: Starting com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle
 06-17 16:15:19.085  1566  1566 I SystemServer: StartStatusBarManagerService
@@ -257,6 +283,9 @@ Dumpstate info: id=1 pid=10466
 06-17 16:15:19.761  1566  1566 I WakePathChecker: updateLauncherPackageNames =com.miui.home
 06-17 16:15:19.761  1566  1566 I WakePathChecker: updateLauncherPackageNames =com.android.settings
 08-27 18:54:26.993 19816 19816 I am_on_paused_called: [0,com.miui.home.launcher.Launcher,handlePauseActivity]
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: FATAL EXCEPTION: Timer-16
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: Process: com.miui.android.fashiongallery, PID: 4667
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available
 06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: Error reading compat-packages
 06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: java.io.FileNotFoundException: /data/system/miui-packages-compat.xml (No such file or directory)
 06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at java.io.FileInputStream.open(Native Method)
