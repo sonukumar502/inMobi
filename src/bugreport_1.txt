@@ -1,0 +1,338 @@
+========================================================
+== dumpstate: 2019-08-27 19:02:04
+========================================================
+
+Build: N2G47H
+Build fingerprint: 'Xiaomi/rosy/rosy:7.1.2/N2G47H/V10.1.2.0.NDAMIFI:user/release-keys'
+Bootloader: unknown
+Radio: MPSS.TA.2.3.c1-00659-8953_GEN_PACK-1.145606.1.148419.1_V063
+Network: (unknown)
+Kernel: Linux version 3.18.31-perf-g40bf317 (builder@mi-server) (gcc version 4.9 20150123 (prerelease) (GCC) ) #1 SMP PREEMPT Tue Nov 6 20:31:30 WIB 2018
+Command line: sched_enable_hmp=1 sched_enable_power_aware=1 console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 buildvariant=user androidboot.emmc=true androidboot.verifiedbootstate=green androidboot.veritymode=enforcing androidboot.keymaster=1 androidboot.serialno=201a9ae07d05 device_locked=1 androidboot.authorized_kernel=true androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_ft8613_ebbg_5p7_720p_video:1:none:cfg:single_dsi board_id=S88567CA1:board_vol=754894
+Bugreport format version: 1.0
+Dumpstate info: id=1 pid=10466
+
+
+------ SYSTEM LOG (logcat -v threadtime -v printable -d *:v) ------
+--------- beginning of system
+01-01 05:35:29.440   468   468 I vold    : Vold 3.0 (the awakening) firing up
+01-01 05:35:29.716   468   474 E vold    : Failed to chmod /data/system_ce/0: No such file or directory
+01-01 05:35:29.716   468   474 E vold    : Failed to chmod /data/misc_ce/0: No such file or directory
+01-01 05:35:29.716   468   474 E vold    : Failed to chmod /data/media/0: No such file or directory
+01-01 05:35:30.549   549   549 I irsc_util: Starting irsc tool
+01-01 05:35:30.560   549   549 I irsc_util: Num of entries:290
+01-01 05:35:30.562   549   549 I irsc_util: Ending irsc tool
+01-01 05:35:30.592   468   583 I Cryptfs : cryptfs_check_passwd
+01-01 05:35:30.667   600   613 I QISL    : QSEE Interrupt Service Listener Thread is started
+01-01 05:35:30.669   600   613 I QISL    : QSEE Interrupt Service Listener was activated successfully
+01-01 05:35:32.603   468   583 I Cryptfs : Using scrypt with keymaster for cryptfs KDF
+01-01 05:35:33.370   468   583 I Cryptfs : keymaster module name is Keymaster QTI HAL
+01-01 05:35:33.370   468   583 I Cryptfs : keymaster version is 256
+01-01 05:35:33.370   468   583 I Cryptfs : Found keymaster1 module, using keymaster1 API.
+01-01 05:35:33.375   468   583 I Cryptfs : Signing safely-padded object
+01-01 05:35:34.257   468   583 E         : get_tmp_passwd: Passed argument is NULL 
+01-01 05:35:34.591   468   583 I Cryptfs : Ascii password was updated
+01-01 05:35:34.593   468   583 I Cryptfs : target_type = req-crypt
+01-01 05:35:34.593   468   583 I Cryptfs : real_blk_name = /dev/block/bootdevice/by-name/userdata, extra_params = fde_enabled ice
+06-17 16:15:10.981  1566  1566 I InstallerConnection: connecting...
+06-17 16:15:11.091  1566  1566 I InstallerConnection: disconnecting...
+06-17 16:15:11.145  1566  1566 I SystemServer: Entered the Android system server!
+06-17 16:15:11.256  1566  1566 I SystemServiceManager: Starting com.android.server.pm.Installer
+06-17 16:15:11.269  1566  1566 I Installer: Waiting for installd to be ready.
+06-17 16:15:11.269  1566  1566 I InstallerConnection: connecting...
+06-17 16:15:11.270  1566  1566 I SystemServiceManager: Starting com.android.server.am.ActivityManagerService$Lifecycle
+06-17 16:15:11.292  1566  1566 I ActivityManager: Memory class: 192
+06-17 16:15:11.465  1566  1566 I IntentFirewall: Read new rules (A:0 B:0 S:0)
+06-17 16:15:11.486  1566  1566 I SystemServiceManager: Starting com.android.server.power.PowerManagerService
+06-17 16:15:11.503  1566  1566 I SystemServiceManager: Starting com.android.server.lights.MiuiLightsService
+06-17 16:15:11.507  1566  1566 I SystemServiceManager: Starting com.android.server.display.DisplayManagerService
+06-17 16:15:11.511  1566  1566 I SystemServiceManager: Starting com.android.server.display.DisplayFeatureService
+06-17 16:15:11.513  1566  1566 I SystemServiceManager: Starting phase 100
+06-17 16:15:11.517  1566  1587 I DisplayManagerService: Display device added: DisplayDeviceInfo{"Built-in Screen": uniqueId="local:0", 720 x 1440, modeId 1, defaultModeId 1, supportedModes [{id=1, width=720, height=1440, fps=60.000004}], colorMode 0, supportedColorModes [0], HdrCapabilities android.view.Display$HdrCapabilities@a69d6308, density 320, 281.353 x 283.534 dpi, appVsyncOff 1000000, presDeadline 16666666, touch INTERNAL, rotation 0, type BUILT_IN, state UNKNOWN, FLAG_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+06-17 16:15:11.519  1566  1587 I LocalDisplayAdapter: setDisplayState(id=0, state=ON)
+06-17 16:15:11.520  1566  1566 I SystemServiceManager: Starting phase 100 done
+06-17 16:15:11.520  1566  1587 I DisplayManagerService: Display device changed state: "Built-in Screen", ON
+06-17 16:15:11.521  1566  1566 I SystemServer: StartPackageManagerService
+06-17 16:15:12.445  1566  1566 W PackageManager: Library not found: /system/framework/MiCloudLibShared.jar
+06-17 16:15:12.620  1566  1566 W PackageManager: Library not found: /system/framework/yellowpage-common.jar
+06-17 16:15:12.676  1566  1566 W PackageManager: Library not found: /system/framework/org.apache.http.legacy.jar
+06-17 16:15:12.747  1566  1566 W PackageManager: Library not found: /system/framework/MiCloudLibShared.jar
+06-17 16:15:12.850  1566  1566 W PackageManager: Library not found: /system/framework/yellowpage-common.jar
+06-17 16:15:12.885  1566  1566 W PackageManager: Library not found: /system/framework/org.apache.http.legacy.jar
+06-17 16:15:12.923  1566  1596 W PackageManager: Failed to parse /system/framework/arm64: Missing base APK in /system/framework/arm64
+06-17 16:15:12.924  1566  1595 W PackageManager: Failed to parse /system/framework/arm: Missing base APK in /system/framework/arm
+06-17 16:15:12.925  1566  1599 W PackageManager: Failed to parse /system/framework/oat: Missing base APK in /system/framework/oat
+06-17 16:15:13.089  1566  1598 W PackageManager: Failed to parse /system/priv-app/Browser: Package com.android.browser at /system/priv-app/Browser ignored: updated version 20190604 better than this 20180829
+06-17 16:15:13.154  1566  1597 W PackageManager: Failed to parse /system/priv-app/Calendar: Package com.android.calendar at /system/priv-app/Calendar ignored: updated version 10030101 better than this 10000200
+06-17 16:15:13.154  1566  1598 W PackageManager: Failed to parse /system/priv-app/CleanMaster: Package com.miui.cleanmaster at /system/priv-app/CleanMaster ignored: updated version 265 better than this 221
+06-17 16:15:13.278  1566  1596 W PackageManager: Failed to parse /system/priv-app/DownloadProviderUi: Package com.android.providers.downloads.ui at /system/priv-app/DownloadProviderUi ignored: updated version 90515110 better than this 80413201
+06-17 16:15:13.369  1566  1597 W PackageParser: Unknown element under <manifest>: uses-library at /system/priv-app/GoogleFeedback/GoogleFeedback.apk Binary XML file line #33
+06-17 16:15:13.532  1566  1598 W PackageManager: Failed to parse /system/priv-app/GmsCore: Package com.google.android.gms at /system/priv-app/GmsCore ignored: updated version 17785020 better than this 11975446
+06-17 16:15:13.534  1566  1597 W PackageParser: Unknown element under <intent-filter>: meta-data at /system/priv-app/MiVRFramework/MiVRFramework.apk Binary XML file line #54
+06-17 16:15:13.541  1566  1599 W PackageManager: Failed to parse /system/priv-app/MiRecycle: Package com.xiaomi.mirecycle at /system/priv-app/MiRecycle ignored: updated version 120 better than this 112
+06-17 16:15:13.560  1566  1596 W PackageParser: Unknown element under <manifest>: meta-data at /system/priv-app/MiDrop/MiDrop.apk Binary XML file line #63
+06-17 16:15:13.585  1566  1596 W PackageManager: Failed to parse /system/priv-app/MiDrop: Package com.xiaomi.midrop at /system/priv-app/MiDrop ignored: updated version 12703 better than this 11507
+06-17 16:15:13.636  1566  1600 W PackageManager: Failed to parse /system/priv-app/MiuiHome: Package com.miui.home at /system/priv-app/MiuiHome ignored: updated version 40950894 better than this 4060003
+06-17 16:15:13.636  1566  1599 W PackageParser: Unknown element under <manifest>: meta-data at /system/priv-app/MiuiGallery/MiuiGallery.apk Binary XML file line #81
+06-17 16:15:13.679  1566  1595 W PackageManager: Failed to parse /system/priv-app/MiuiScanner: Package com.xiaomi.scanner at /system/priv-app/MiuiScanner ignored: updated version 10610 better than this 10220
+06-17 16:15:13.805  1566  1599 W PackageManager: Failed to parse /system/priv-app/Music: Package com.miui.player at /system/priv-app/Music ignored: updated version 282 better than this 189
+06-17 16:15:13.806  1566  1596 W PackageManager: Failed to parse /system/priv-app/PersonalAssistantGlobal: Package com.mi.android.globalpersonalassistant at /system/priv-app/PersonalAssistantGlobal ignored: updated version 201406 better than this 20902
+06-17 16:15:13.837  1566  1600 W PackageManager: Failed to parse /system/priv-app/Phonesky: Package com.android.vending at /system/priv-app/Phonesky ignored: updated version 81531400 better than this 81060800
+06-17 16:15:13.858  1566  1597 W PackageParser: Unknown element under <manifest>: protected_broadcast at /system/priv-app/SecurityCenter/SecurityCenter.apk Binary XML file line #46
+06-17 16:15:14.217  1566  1597 W PackageManager: Failed to parse /system/priv-app/Velvet: Package com.google.android.googlequicksearchbox at /system/priv-app/Velvet ignored: updated version 300958807 better than this 300756677
+06-17 16:15:14.339  1566  1599 W PackageManager: Failed to parse /system/app/Calculator: Package com.miui.calculator at /system/app/Calculator ignored: updated version 100003 better than this 127
+06-17 16:15:14.339  1566  1596 W PackageManager: Failed to parse /system/app/BugReport: Package com.miui.bugreport at /system/app/BugReport ignored: updated version 20303 better than this 20205
+06-17 16:15:14.463  1566  1600 W PackageManager: Failed to parse /system/app/Chrome: Package com.android.chrome at /system/app/Chrome ignored: updated version 377010137 better than this 335915852
+06-17 16:15:14.488  1566  1599 W PackageManager: Failed to parse /system/app/Duo: Package com.google.android.apps.tachyon at /system/app/Duo ignored: updated version 2980701 better than this 1865967
+06-17 16:15:14.505  1566  1596 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/Drive/Drive.apk Binary XML file line #113
+06-17 16:15:14.534  1566  1596 W PackageManager: Failed to parse /system/app/Drive: Package com.google.android.apps.docs at /system/app/Drive ignored: updated version 192320444 better than this 180720244
+06-17 16:15:14.624  1566  1596 W PackageManager: Failed to parse /system/app/FileExplorerGlobal: Package com.mi.android.globalFileexplorer at /system/app/FileExplorerGlobal ignored: updated version 20190621 better than this 20180728
+06-17 16:15:14.706  1566  1598 W PackageManager: Failed to parse /system/app/GoogleTTS: Package com.google.android.tts at /system/app/GoogleTTS ignored: updated version 210315396 better than this 210314091
+06-17 16:15:14.707  1566  1597 W PackageManager: Failed to parse /system/app/Gmail2: Package com.google.android.gm at /system/app/Gmail2 ignored: updated version 61522066 better than this 60126837
+06-17 16:15:14.744  1566  1596 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/HybridPlatform/HybridPlatform.apk Binary XML file line #45
+06-17 16:15:14.744  1566  1598 W PackageManager: Failed to parse /system/app/InMipay: Package com.mipay.wallet.in at /system/app/InMipay ignored: updated version 2001009 better than this 1
+06-17 16:15:14.755  1566  1595 W PackageParser: Unknown element under <manifest>: user-permission at /system/app/Joyose/Joyose.apk Binary XML file line #47
+06-17 16:15:14.757  1566  1596 W PackageManager: Failed to parse /system/app/HybridPlatform: Package com.miui.hybrid at /system/app/HybridPlatform ignored: updated version 10400401 better than this 10100301
+06-17 16:15:14.828  1566  1595 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/MSA-Global/MSA-Global.apk Binary XML file line #93
+06-17 16:15:14.862  1566  1596 W PackageManager: Skipping provider name com.factory.mmigroup.fileprovider (in package com.factory.mmigroup): name already used by com.mediatek.factorymode
+06-17 16:15:14.889  1566  1600 W PackageManager: Failed to parse /system/app/LatinImeGoogle: Package com.google.android.inputmethod.latin at /system/app/LatinImeGoogle ignored: updated version 26830614 better than this 26761314
+06-17 16:15:14.910  1566  1598 W PackageManager: Failed to parse /system/app/Maps: Package com.google.android.apps.maps at /system/app/Maps ignored: updated version 1019101243 better than this 972200243
+06-17 16:15:14.952  1566  1596 W PackageManager: Failed to parse /system/app/MiPicks: Package com.xiaomi.mipicks at /system/app/MiPicks ignored: updated version 1914903 better than this 1914700
+06-17 16:15:14.976  1566  1598 W PackageManager: Failed to parse /system/app/MiuiVideoPlayer: Package com.miui.videoplayer at /system/app/MiuiVideoPlayer ignored: updated version 2019061490 better than this 2018081090
+06-17 16:15:15.029  1566  1598 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/PaymentService/PaymentService.apk Binary XML file line #44
+06-17 16:15:15.030  1566  1598 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/PaymentService/PaymentService.apk Binary XML file line #49
+06-17 16:15:15.056  1566  1600 W PackageManager: Failed to parse /system/app/Music2: Package com.google.android.music at /system/app/Music2 ignored: updated version 80591 better than this 67731
+06-17 16:15:15.095  1566  1599 W PackageParser: Service exported request ignored due to singleUser: com.miui.powerkeeper.powerchecker.PowerCheckerService at /system/app/PowerKeeper/PowerKeeper.apk Binary XML file line #94
+06-17 16:15:15.095  1566  1599 W PackageParser: Service exported request ignored due to singleUser: com.miui.powerkeeper.statemachine.PowerStateMachineService at /system/app/PowerKeeper/PowerKeeper.apk Binary XML file line #101
+06-17 16:15:15.148  1566  1596 W PackageManager: Failed to parse /system/app/Photos: Package com.google.android.apps.photos at /system/app/Photos ignored: updated version 4846842 better than this 2288739
+06-17 16:15:15.213  1566  1599 W PackageManager: Failed to parse /system/app/SystemAppUpdater: Package com.xiaomi.discover at /system/app/SystemAppUpdater ignored: updated version 1914462 better than this 1914383
+06-17 16:15:15.227  1566  1597 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/ThemeManager/ThemeManager.apk Binary XML file line #71
+06-17 16:15:15.248  1566  1597 W PackageManager: Failed to parse /system/app/ThemeManager: Package com.android.thememanager at /system/app/ThemeManager ignored: updated version 483 better than this 342
+06-17 16:15:15.292  1566  1600 W PackageParser: Unknown element under <manifest>: meta-data at /system/app/VsimCore/VsimCore.apk Binary XML file line #19
+06-17 16:15:15.322  1566  1599 W PackageManager: Failed to parse /system/app/WMService: Package com.miui.wmsvc at /system/app/WMService ignored: updated version 10004 better than this 3
+06-17 16:15:15.342  1566  1597 W PackageManager: Failed to parse /system/app/Videos: Package com.google.android.videos at /system/app/Videos ignored: updated version 41200081 better than this 40300051
+06-17 16:15:15.447  1566  1598 W PackageManager: Failed to parse /system/app/YouTube: Package com.google.android.youtube at /system/app/YouTube ignored: updated version 1425573430 better than this 1307553430
+06-17 16:15:15.499  1566  1598 W PackageManager: Failed to parse /system/app/talkback: Package com.google.android.marvin.talkback at /system/app/talkback ignored: updated version 60101372 better than this 60100343
+06-17 16:15:15.535  1566  1599 W PackageParser: Service exported request ignored due to singleUser: org.codeaurora.ims.ImsService at /system/vendor/app/ims/ims.apk Binary XML file line #40
+06-17 16:15:15.552  1566  1566 I PreinstallApp: Nothing need copy for normal boot.
+06-17 16:15:15.770  1566  1595 W PackageManager: Skipping provider name com.miui.player.selfupdate.fileprovider (in package com.miui.player): name already used by com.miui.player
+06-17 16:15:16.507  1566  1597 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.vuclip.viu-1/base.apk Binary XML file line #30
+06-17 16:15:16.507  1566  1597 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.vuclip.viu-1/base.apk Binary XML file line #33
+06-17 16:15:16.507  1566  1597 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.vuclip.viu-1/base.apk Binary XML file line #36
+06-17 16:15:16.533  1566  1596 W PackageManager: Skipping provider name com.fivepaisa.trade.provider (in package com.fivepaisa.trade): name already used by com.fivepaisa.trade
+06-17 16:15:16.551  1566  1595 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.miui.calculator-1/base.apk Binary XML file line #36
+06-17 16:15:16.634  1566  1598 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.jabong.android-2/base.apk Binary XML file line #73
+06-17 16:15:16.806  1566  1599 W PackageParser: Unknown element under <manifest>: uses-sdk at /data/app/com.netflix.mediaclient-2/split_voip.apk Binary XML file line #0
+06-17 16:15:16.806  1566  1599 W PackageParser: Unknown element under <manifest>: module at /data/app/com.netflix.mediaclient-2/split_voip.apk Binary XML file line #0
+06-17 16:15:16.898  1566  1596 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.miui.hybrid-2/base.apk Binary XML file line #50
+06-17 16:15:16.956  1566  1596 W PackageManager: Skipping provider name com.miui.hybrid.file (in package com.miui.hybrid): name already used by com.miui.hybrid
+06-17 16:15:17.025  1566  1600 W PackageManager: Skipping provider name com.mipay.wallet.in.selfupdate.fileprovider (in package com.mipay.wallet.in): name already used by com.mipay.wallet.in
+06-17 16:15:17.026  1566  1599 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.android.providers.downloads.ui-2/base.apk Binary XML file line #41
+06-17 16:15:17.220  1566  1595 W PackageParser: Unknown element under <application>: enable-feature at /data/app/com.yahoo.mobile.client.android.mail-1/base.apk Binary XML file line #889
+06-17 16:15:17.227  1566  1600 W PackageParser: Unknown element under <manifest>: meta-data at /data/app/com.android.thememanager-1/base.apk Binary XML file line #77
+06-17 16:15:17.470  1566  1566 E PackageManager: updateAllSharedLibrariesLPw failed: Package com.mediatek.factorymode requires unavailable shared library com.qualcomm.qcnvitems; failing!
+06-17 16:15:17.495  1566  1566 I PackageManager: Time to scan packages: 5.138 seconds
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.CLEAR_APP_USER_DATA from package com.google.android.packageinstaller (protectionLevel=258 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.GRANT_RUNTIME_PERMISSIONS from package com.google.android.packageinstaller (protectionLevel=770 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.REVOKE_RUNTIME_PERMISSIONS from package com.google.android.packageinstaller (protectionLevel=770 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS from package com.google.android.packageinstaller (protectionLevel=770 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.INTERACT_ACROSS_USERS_FULL from package com.google.android.packageinstaller (protectionLevel=258 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.KILL_UID from package com.google.android.packageinstaller (protectionLevel=258 flags=0x38483e45)
+06-17 16:15:17.526  1566  1566 I PackageManager: Un-granting permission android.permission.MANAGE_APP_OPS_RESTRICTIONS from package com.google.android.packageinstaller (protectionLevel=258 flags=0x38483e45)
+06-17 16:15:17.558  1566  1566 W PackageManager: Destroying /data/user/0/media due to: com.android.server.pm.PackageManagerException: Package media is unknown
+06-17 16:15:18.078  1566  1566 I SystemServer: StartOtaDexOptService
+06-17 16:15:18.219  1566  1566 I SystemServer: StartUserManagerService
+06-17 16:15:18.219  1566  1566 I SystemServiceManager: Starting com.android.server.pm.UserManagerService$LifeCycle
+06-17 16:15:18.237  1566  1566 I SystemServiceManager: Starting com.android.server.BatteryService
+06-17 16:15:18.249  1566  1566 I SystemServiceManager: Starting com.android.server.usage.UsageStatsService
+06-17 16:15:18.251  1566  1581 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state (No such file or directory)
+06-17 16:15:18.258  1566  1566 I SystemServiceManager: Starting com.android.server.webkit.WebViewUpdateService
+06-17 16:15:18.264  1566  1566 I SystemServer: Reading configuration...
+06-17 16:15:18.264  1566  1566 I SystemServer: StartSchedulingPolicyService
+06-17 16:15:18.266  1566  1566 I SystemServiceManager: Starting com.android.server.telecom.TelecomLoaderService
+06-17 16:15:18.267  1566  1566 I SystemServer: StartTelephonyRegistry
+06-17 16:15:18.272  1566  1566 I SystemServer: StartEntropyMixer
+06-17 16:15:18.275  1566  1566 I EntropyMixer: Writing entropy...
+06-17 16:15:18.281  1566  1566 I SystemServer: Camera Service
+06-17 16:15:18.282  1566  1566 I SystemServiceManager: Starting com.android.server.camera.CameraService
+06-17 16:15:18.285  1566  1566 I SystemServer: StartAccountManagerService
+06-17 16:15:18.285  1566  1566 I SystemServiceManager: Starting com.android.server.accounts.AccountManagerService$Lifecycle
+06-17 16:15:18.296  1566  1566 I SystemServer: StartContentService
+06-17 16:15:18.296  1566  1566 I SystemServiceManager: Starting com.android.server.content.ContentService$Lifecycle
+06-17 16:15:18.300  1566  1566 I SystemServer: InstallSystemProviders
+06-17 16:15:18.400  1566  1566 I SystemServer: StartVibratorService
+06-17 16:15:18.406  1566  1566 I SystemServer: StartConsumerIrService
+06-17 16:15:18.410  1566  1566 I SystemServer: StartAlarmManagerService
+06-17 16:15:18.410  1566  1566 I SystemServiceManager: Starting com.android.server.AlarmManagerService
+06-17 16:15:18.420  1566  1566 I SystemServer: InitWatchdog
+06-17 16:15:18.421  1566  1566 I SystemServer: StartInputManagerService
+06-17 16:15:18.422  1566  1566 I InputManager: Initializing input manager, mUseDevInputEventForAudioJack=true
+06-17 16:15:18.423  1566  1566 I SystemServer: StartWindowManagerService
+06-17 16:15:18.439  1566  1587 I WindowManager: No existing display settings /data/system/display_settings.xml; starting empty
+06-17 16:15:18.524  1566  1566 I SystemServer: StartVrManagerService
+06-17 16:15:18.524  1566  1566 I SystemServiceManager: Starting com.android.server.vr.VrManagerService
+06-17 16:15:18.530  1566  1566 I InputManager: Starting input manager
+06-17 16:15:18.541  1566  1566 I SystemServiceManager: Starting com.android.server.BluetoothService
+06-17 16:15:18.545  1566  1566 I SystemServer: ConnectivityMetricsLoggerService
+06-17 16:15:18.545  1566  1566 I SystemServiceManager: Starting com.android.server.connectivity.MetricsLoggerService
+06-17 16:15:18.546  1566  1566 I SystemServer: IpConnectivityMetrics
+06-17 16:15:18.546  1566  1566 I SystemServiceManager: Starting com.android.server.connectivity.IpConnectivityMetrics
+06-17 16:15:18.548  1566  1566 I SystemServer: PinnerService
+06-17 16:15:18.548  1566  1566 I SystemServiceManager: Starting com.android.server.PinnerService
+06-17 16:15:18.550  1566  1566 I SystemServiceManager: Starting com.android.server.InputMethodManagerService$Lifecycle
+06-17 16:15:18.550  1566  1580 E PinnerService: Could not pin file /data/dalvik-cache/arm64/system@framework@boot.oat with error open failed: ELOOP (Too many symbolic links encountered)
+06-17 16:15:18.550  1566  1580 E PinnerService: Failed to pin file = /data/dalvik-cache/arm64/system@framework@boot.oat
+06-17 16:15:18.551  1566  1580 E PinnerService: Could not pin file /data/dalvik-cache/arm/system@framework@boot.oat with error open failed: ELOOP (Too many symbolic links encountered)
+06-17 16:15:18.551  1566  1580 E PinnerService: Failed to pin file = /data/dalvik-cache/arm/system@framework@boot.oat
+06-17 16:15:18.551  1566  1580 E PinnerService: Could not pin file /data/dalvik-cache/arm64/system@framework@services.jar@classes.dex with error open failed: ENOENT (No such file or directory)
+06-17 16:15:18.551  1566  1580 E PinnerService: Failed to pin file = /data/dalvik-cache/arm64/system@framework@services.jar@classes.dex
+06-17 16:15:18.551  1566  1580 E PinnerService: Could not pin file /data/dalvik-cache/arm/system@framework@services.jar@classes.dex with error open failed: ENOENT (No such file or directory)
+06-17 16:15:18.551  1566  1580 E PinnerService: Failed to pin file = /data/dalvik-cache/arm/system@framework@services.jar@classes.dex
+06-17 16:15:18.619  1566  1580 E PinnerService: Could not pin file /system/framework/oat/arm/services.odex with error open failed: ENOENT (No such file or directory)
+06-17 16:15:18.620  1566  1580 E PinnerService: Failed to pin file = /system/framework/oat/arm/services.odex
+06-17 16:15:18.691  1566  1566 I SystemServer: StartAccessibilityManagerService
+06-17 16:15:18.710  1566  1566 I ActivityManager: Config changes=1df8 {1.0 ?mcc?mnc [en_IN] ldltr sw360dp w360dp h720dp 320dpi nrml long port ?uimode ?night -touch -keyb/v/h -nav/h s.2 themeChanged=0 themeChangedFlags=0}
+06-17 16:15:18.732  1566  1587 I ActivityManager: Config changes=408 {1.0 ?mcc?mnc [en_IN] ldltr sw360dp w360dp h647dp 320dpi nrml long port ?uimode ?night finger -keyb/v/h -nav/h s.3 themeChanged=0 themeChangedFlags=0}
+06-17 16:15:18.753  1566  1580 I UsageStatsHourlyHelper: User[0] Rollover hours scheduled @ 2018-06-17 17:15:18(1529235918738)
+06-17 16:15:18.753  1566  1580 I UsageStatsService: User[0] Rollover scheduled @ 2018-06-18 16:15:18(1529318718738)
+06-17 16:15:18.753  1566  1580 I UsageStatsHourlyHelper: User[0] Rollover hours scheduled @ 2018-06-17 17:15:18(1529235918738)
+06-17 16:15:18.761  1566  1566 I SystemServiceManager: Starting com.android.server.MountService$Lifecycle
+06-17 16:15:18.771  1566  1566 I SystemServiceManager: Starting com.android.server.UiModeManagerService
+06-17 16:15:18.774  1566  1685 I ActivityManager: Config changes=200 {1.0 ?mcc?mnc [en_IN] ldltr sw360dp w360dp h647dp 320dpi nrml long port finger -keyb/v/h -nav/h s.4 themeChanged=0 themeChangedFlags=0}
+06-17 16:15:18.793  1566  1566 I SystemServer: StartLockSettingsService
+06-17 16:15:18.793  1566  1566 I SystemServiceManager: Starting com.android.server.LockSettingsService$Lifecycle
+06-17 16:15:18.796  1566  1682 W MountService: No primary storage mounted!
+06-17 16:15:18.801  1566  1566 I SystemServiceManager: Starting com.android.server.PersistentDataBlockService
+06-17 16:15:19.066  1566  1566 I SystemServiceManager: Starting com.android.server.DeviceIdleController
+09-26 06:00:50.196  4667  4667 D AndroidRuntime: Shutting down VM
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: FATAL EXCEPTION: main
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: Process: com.miui.android.fashiongallery, PID: 4667
+09-26 06:00:50.202  4667  4667 E AndroidRuntime: java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.checkStateLoss(Unknown Source:10)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.FragmentManagerImpl.enqueueAction(Unknown Source:2)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.BackStackRecord.a(Unknown Source:78)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.v4.app.BackStackRecord.commit(Unknown Source:1)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.showBingeContainer(Unknown Source:19)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity.e(Unknown Source:0)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at glance.ui.sdk.activity.GlanceHomeActivity$3.onTabSelected(Unknown Source:30)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.dispatchTabSelected(Unknown Source:19)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:55)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout.a(Unknown Source:1)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout$Tab.select(Unknown Source:14)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.support.design.widget.TabLayout$TabView.performClick(Unknown Source:16)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View.performClickInternal(View.java:6585)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View.access$3100(View.java:785)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.view.View$PerformClick.run(View.java:25921)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Handler.handleCallback(Handler.java:873)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:99)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.os.Looper.loop(Looper.java:201)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:6810)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:547)
+09-26 06:00:50.202  4667  4667 E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:873)
+06-17 16:15:19.069  1566  1682 W MountService: No primary storage mounted!
+06-17 16:15:19.077  1566  1566 I SystemServiceManager: Starting com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle
+06-17 16:15:19.085  1566  1566 I SystemServer: StartStatusBarManagerService
+06-17 16:15:19.087  1566  1566 I SystemServer: StartClipboardService
+06-17 16:15:19.090  1566  1566 I SystemServer: StartNetworkManagementService
+06-17 16:15:19.095  1566  1687 I NetworkManagement: onDaemonConnected()
+06-17 16:15:19.099  1566  1566 I SystemServiceManager: Starting com.android.server.TextServicesManagerService$Lifecycle
+06-17 16:15:19.102  1566  1566 W TextServicesManagerService: no available spell checker services found
+06-17 16:15:19.104  1566  1566 I SystemServer: StartNetworkScoreService
+06-17 16:15:19.107  1566  1566 I SystemServer: StartNetworkStatsService
+06-17 16:15:19.115  1566  1566 I SystemServer: StartNetworkPolicyManagerService
+06-17 16:15:19.125  1566  1566 I SystemServer: No Wi-Fi NAN Service (NAN support Not Present)
+06-17 16:15:19.130  1566  1566 I SystemServiceManager: Starting com.android.server.wifi.p2p.WifiP2pService
+06-17 16:15:19.155  1566  1566 I SystemServiceManager: Starting com.android.server.wifi.WifiService
+06-17 16:15:19.409  1566  1606 I PackageManager: Deferred reconcileAppsData finished 216 packages
+06-17 16:15:19.468  1566  1566 I SystemServiceManager: Starting com.android.server.wifi.scanner.WifiScanningService
+06-17 16:15:19.472  1566  1566 I SystemServiceManager: Starting com.android.server.wifi.RttService
+06-17 16:15:19.475  1566  1566 I SystemServiceManager: Starting com.android.server.ethernet.EthernetService
+06-17 16:15:19.479  1566  1566 I SystemServer: StartConnectivityService
+06-17 16:15:19.513  1566  1566 E ConnectivityService: Ignoring protectedNetwork 14
+06-17 16:15:19.513  1566  1566 E ConnectivityService: Ignoring protectedNetwork 15
+06-17 16:15:19.539  1566  1566 I SystemServer: StartNsdService
+06-17 16:15:19.545  1566  1566 I SystemServer: StartUpdateLockService
+06-17 16:15:19.547  1566  1566 I SystemServiceManager: Starting com.android.server.RecoverySystemService
+06-17 16:15:19.550  1566  1566 I SystemServiceManager: Starting com.android.server.notification.NotificationManagerService
+06-17 16:15:19.601  1566  1566 I SystemServiceManager: Starting com.android.server.storage.DeviceStorageMonitorService
+06-17 16:15:19.604  1566  1566 I SystemServer: StartLocationManagerService
+06-17 16:15:19.612  1566  1566 I SystemServer: StartCountryDetectorService
+08-27 18:52:41.660  4667  4966 W art     : Throwing OutOfMemoryError "Failed to allocate a 8204 byte allocation with 0 free bytes and -2MB until OOM"
+06-17 16:15:19.614  1566  1566 I SystemServer: StartSearchManagerService
+06-17 16:15:19.614  1566  1566 I SystemServiceManager: Starting com.android.server.search.SearchManagerService$Lifecycle
+06-17 16:15:19.617  1566  1566 I SystemServiceManager: Starting com.android.server.DropBoxManagerService
+06-17 16:15:19.620  1566  1566 I SystemServer: StartWallpaperManagerService
+06-17 16:15:19.620  1566  1566 I SystemServiceManager: Starting com.android.server.wallpaper.WallpaperManagerService$Lifecycle
+06-17 16:15:19.624  1566  1566 E WallpaperManagerService: Invalid wallpaper data
+06-17 16:15:19.624  1566  1566 E WallpaperManagerService: Unable to apply new wallpaper
+06-17 16:15:19.626  1566  1566 I SystemServer: StartAudioService
+06-17 16:15:19.627  1566  1566 I SystemServiceManager: Starting com.android.server.audio.AudioService$Lifecycle
+06-17 16:15:19.641  1566  1581 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state (No such file or directory)
+06-17 16:15:19.668  1566  1566 I SystemServiceManager: Starting com.android.server.DockObserver
+06-17 16:15:19.669  1566  1566 W DockObserver: This kernel does not have dock station support
+06-17 16:15:19.670  1566  1566 I SystemServer: StartWiredAccessoryManager
+06-17 16:15:19.672  1566  1566 W WiredAccessoryManager: This kernel does not have usb audio support
+06-17 16:15:19.672  1566  1566 W WiredAccessoryManager: This kernel does not have HDMI audio support
+06-17 16:15:19.672  1566  1566 I SystemServiceManager: Starting com.android.server.midi.MidiService$Lifecycle
+06-17 16:15:19.675  1566  1566 I SystemServiceManager: Starting com.android.server.usb.UsbService$Lifecycle
+08-27 18:52:43.038  4667  4966 W art     : JNI WARNING: java.lang.OutOfMemoryError thrown while calling printStackTrace
+06-17 16:15:19.679  1566  1566 I UsbDeviceManager: Setting USB config to mtp,adb
+06-17 16:15:19.738  1566  1566 W SystemServiceManager: Service com.android.server.usb.UsbService$Lifecycle took 63 ms in onStart
+06-17 16:15:19.738  1566  1566 I SystemServer: StartSerialService
+06-17 16:15:19.761  1566  1566 I WakePathChecker: updateLauncherPackageNames =com.miui.home
+06-17 16:15:19.761  1566  1566 I WakePathChecker: updateLauncherPackageNames =com.android.settings
+08-27 18:54:26.993 19816 19816 I am_on_paused_called: [0,com.miui.home.launcher.Launcher,handlePauseActivity]
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: FATAL EXCEPTION: Timer-16
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: Process: com.miui.android.fashiongallery, PID: 4667
+08-27 18:52:45.994  4667  7240 E AndroidRuntime: java.lang.OutOfMemoryError: OutOfMemoryError thrown while trying to throw OutOfMemoryError; no stack trace available
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: Error reading compat-packages
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: java.io.FileNotFoundException: /data/system/miui-packages-compat.xml (No such file or directory)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at java.io.FileInputStream.open(Native Method)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at android.util.AtomicFile.openRead(AtomicFile.java:199)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at com.miui.server.MiuiCompatModePackages.readPackagesConfig(MiuiCompatModePackages.java:141)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at com.miui.server.MiuiCompatModePackages.-wrap7(MiuiCompatModePackages.java)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at com.miui.server.MiuiCompatModePackages$CompatHandler.handleMessage(MiuiCompatModePackages.java:95)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at android.os.Looper.loop(Looper.java:163)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+06-17 16:15:19.769  1566  1721 W MiuiCompatModePackages: 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+06-17 16:15:19.772  1566  1721 I MiuiCompatModePackages: registering process observer...
+06-17 16:15:19.802  1566  1720 W PackageParser: Unknown element under <manifest>: protected_broadcast at /system/priv-app/SecurityCenter/SecurityCenter.apk Binary XML file line #46
+06-17 16:15:19.804  1566  1720 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.WRITE_SECURE_SETTINGS in package: com.miui.securitycenter at: Binary XML file line #127
+06-17 16:15:19.805  1566  1720 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: miui.permission.USE_INTERNAL_GENERAL_API in package: com.miui.securitycenter at: Binary XML file line #160
+      08-27 19:03:35.103 6801 2643 I SystemUpdate-DataParser [InvalidPackageList] JSON : invalidSystemPackageList list is null
+
+
+
+PROVIDER ContentProviderRecord{2138867 u0 com.google.android.googlequicksearchbox/android.arch.lifecycle.ProcessLifecycleOwnerInitializer} pid=8192
+    Client:
+      nothing to dump
+
+PROVIDER ContentProviderRecord{d1afebd u0 com.miui.vsimcore/.provider.SettingProvider} pid=6826
+    Client:
+      nothing to dump
+
+PROVIDER ContentProviderRecord{ec64403 u0 com.google.android.apps.photos/.localcreationmedia.contentprovider.LocalCreationContentProvider} pid=10277
+    Client:
+      nothing to dump
+
+PROVIDER ContentProviderRecord{7fdc9b9 u0 com.xiaomi.discover/com.google.firebase.provider.FirebaseInitProvider} pid=6801
+    Client:
+      nothing to dump
+
+PROVIDER ContentProviderRecord{f5f1d5f u0 com.google.android.apps.photos/.backup.moovrelocate.MoovRelocationContentProvider} pid=10277
+    Client:
+      nothing to dump
+
+PROVIDER ContentProviderRecord{da84875 u0 com.google.android.gms/.matchstick.data.DatabaseProvider} pid=27220
+    Client:
+------ 2.455s was the duration of 'APP PROVIDERS' ------
+------ 0.000s was the duration of 'dump_modem_logs' ------
+========================================================
+== Final progress (pid 10466): 1144/6500 (originally 6500)
+========================================================
+== dumpstate: done
+========================================================
+------ 80.439s was the duration of 'DUMPSTATE' ------

@@ -28,39 +28,46 @@ public class Test {
 			Map<String, List<String>> mp = new HashMap<String, List<String>>();
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
-				if (data.startsWith("0") || data.startsWith("1")) {
+				if (data.startsWith("01-") || data.startsWith("02-") || data.startsWith("03-") || data.startsWith("04-")
+						|| data.startsWith("05-") || data.startsWith("06-") || data.startsWith("07-")
+						|| data.startsWith("08-") || data.startsWith("09-") || data.startsWith("10-")
+						|| data.startsWith("11-") || data.startsWith("12-")) {
 					String[] a = data.split(" ");
 					String logLevels = null;
 					String msg = null;
-					if (a[4].trim().equals(pid) || a[3].trim().equals(pid)) {
-						String data1 = data.substring(18).trim();
-						String pids = data1.substring(0, 5).trim();
+					try{
+						if (a[4].trim().equals(pid) && a[4].trim()!=null|| a[3].trim().equals(pid)&& a[3].trim()!=null) {
+							String data1 = data.substring(18).trim();
+							String pids = data1.substring(0, 5).trim();
 
-						if (pids.length() == 4) {
-							logLevels = data1.substring(11, 12);
-							msg = data1.substring(13);
-						} else if (pids.length() == 3) {
-							logLevels = data1.substring(10, 11);
-							msg = data1.substring(12);
-						} else if (pids.length() == 5) {
-							logLevels = data1.substring(12, 13);
-							msg = data1.substring(14);
-						}
-						if (logLevels.equals("E")) {
+							if (pids.length() == 4) {
+								logLevels = data1.substring(11, 12);
+								msg = data1.substring(13);
+							} else if (pids.length() == 3) {
+								logLevels = data1.substring(10, 11);
+								msg = data1.substring(12);
+							} else if (pids.length() == 5) {
+								logLevels = data1.substring(12, 13);
+								msg = data1.substring(14);
+							}
+							if (logLevels.equals("E")) {
 
-							al.add(msg);
-						}
-						if (msg.contains("AndroidRuntime:")) {
-							al2.add(msg);
-						}
-						for (String s : searchString) {
-							// System.out.println(msg);
-							if (msg.toLowerCase().contains(s.toLowerCase())) {
-								al1.add(msg);
-								break;
+								al.add(msg);
+							}
+							if (msg.contains("AndroidRuntime:")) {
+								al2.add(msg);
+							}
+							for (String s : searchString) {
+								// System.out.println(msg);
+								if (msg.toLowerCase().contains(s.toLowerCase())) {
+									al1.add(msg);
+									break;
+								}
 							}
 						}
-					}
+					}catch(Exception e){
+						}
+					
 
 				}
 
