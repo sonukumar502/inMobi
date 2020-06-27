@@ -1,12 +1,15 @@
 package test;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
@@ -15,10 +18,11 @@ public class Test {
 	public static void main(String[] args) throws IOException {
 
 		try {
-			File myObj = new File("src/bugreport.txt");
+			File myObj = new File("resources/bugreport.txt");
 			Scanner myReader = new Scanner(myObj);
-			String pid = "1556";
-			String searchString[] = { "WARNING", "OOM", "OutOfMemoryError" };
+			String pid = getValueFromPropertiesFile("PID");
+			String srchString=getValueFromPropertiesFile("SEARCHSTRING").trim();
+			String searchString[] = srchString.split(",");
 			List<String> errorList = new ArrayList<String>();
 			List<String> matchingStringList = new ArrayList<String>();
 			List<String> fatalExceptionList = new ArrayList<String>();
@@ -90,7 +94,9 @@ public class Test {
 				ftalExceptionStakeTraceList.add(fatalExceptionList.get(a + 2).substring(16).trim());
 				fatalExceptionMap.put(fatalExceptionList.get(a + 2).substring(16).trim(), al3);
 			}
-			
+			System.out.println("Logs for PID: "+pid);
+			System.out.println("====================================");
+			System.out.println();
 			System.out.println("FATAL EXCEPTION");
 			System.out.println("==================");
 			if(ftalExceptionStakeTraceList.size()>0){
@@ -129,8 +135,8 @@ public class Test {
 			}
 			System.out.println("");
 			System.out.println("");
-			System.out.println("Matching Strings");
-			System.out.println("==================");
+			System.out.println("Matching Strings: "+srchString);
+			System.out.println("=======================================================");
 			if(matchingStringList.size()>0){
 			System.out.println("");
 			System.out.println("Matching String| # of Occurrences");
@@ -156,5 +162,13 @@ public class Test {
 		for (Map.Entry<String, Integer> val : hm.entrySet()) {
 			System.out.println(val.getKey() + "| " + val.getValue());
 		}
+	}
+	
+	public static String getValueFromPropertiesFile(String key) throws IOException{
+		InputStream input = new FileInputStream("resources/Input.properties");
+		Properties prop = new Properties();
+		prop.load(input);
+		String value=prop.getProperty(key);
+		return value;
 	}
 }
