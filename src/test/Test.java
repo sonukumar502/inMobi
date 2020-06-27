@@ -1,11 +1,9 @@
 package test;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,13 +17,13 @@ public class Test {
 		try {
 			File myObj = new File("src/bugreport.txt");
 			Scanner myReader = new Scanner(myObj);
-			String pid = "4667";
+			String pid = "1556";
 			String searchString[] = { "WARNING", "OOM", "OutOfMemoryError" };
-			List<String> al = new ArrayList<String>();
-			List<String> al1 = new ArrayList<String>();
-			List<String> al2 = new ArrayList<String>();
-			List<String> al4 = new ArrayList<String>();
-			Map<String, List<String>> mp = new HashMap<String, List<String>>();
+			List<String> errorList = new ArrayList<String>();
+			List<String> matchingStringList = new ArrayList<String>();
+			List<String> fatalExceptionList = new ArrayList<String>();
+			List<String> ftalExceptionStakeTraceList = new ArrayList<String>();
+			Map<String, List<String>> fatalExceptionMap = new HashMap<String, List<String>>();
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
 				if (data.startsWith("01-") || data.startsWith("02-") || data.startsWith("03-") || data.startsWith("04-")
@@ -52,15 +50,15 @@ public class Test {
 							}
 							if (logLevels.equals("E")) {
 
-								al.add(msg);
+								errorList.add(msg);
 							}
 							if (msg.contains("AndroidRuntime:")) {
-								al2.add(msg);
+								fatalExceptionList.add(msg);
 							}
 							for (String s : searchString) {
-								// System.out.println(msg);
-								if (msg.toLowerCase().contains(s.toLowerCase())) {
-									al1.add(msg);
+								//To match only exact word from Input 
+								if (msg.contains(s)) {
+									matchingStringList.add(msg);
 									break;
 								}
 							}
@@ -74,36 +72,37 @@ public class Test {
 			}
 
 			ArrayList<Integer> indexAl = new ArrayList<>();
-			for (int i = 0; i < al2.size(); i++) {
-				if (al2.get(i).trim().contains("FATAL EXCEPTION")) {
+			for (int i = 0; i < fatalExceptionList.size(); i++) {
+				if (fatalExceptionList.get(i).trim().contains("FATAL EXCEPTION")) {
 					indexAl.add(i);
 				}
 			}
 
 			for (int a : indexAl) {
 				List<String> al3 = new ArrayList<String>();
-				for (int i = a + 3; i < al2.size(); i++) {
+				for (int i = a + 3; i < fatalExceptionList.size(); i++) {
 
-					if (al2.get(i).contains("FATAL EXCEPTION:")) {
+					if (fatalExceptionList.get(i).contains("FATAL EXCEPTION:")) {
 						break;
 					}
-					al3.add(al2.get(i).substring(16).trim());
+					al3.add(fatalExceptionList.get(i).substring(16).trim());
 				}
-				al4.add(al2.get(a + 2).substring(16).trim());
-				mp.put(al2.get(a + 2).substring(16).trim(), al3);
+				ftalExceptionStakeTraceList.add(fatalExceptionList.get(a + 2).substring(16).trim());
+				fatalExceptionMap.put(fatalExceptionList.get(a + 2).substring(16).trim(), al3);
 			}
-
+			
 			System.out.println("FATAL EXCEPTION");
 			System.out.println("==================");
+			if(ftalExceptionStakeTraceList.size()>0){
 			System.out.println("");
 			System.out.println("Exception Message| # of Occurrences");
-			countFrequencies(al4);
+			countFrequencies(ftalExceptionStakeTraceList);
 			System.out.println("");
 			System.out.println("Stacktrace:");
 			System.out.println("==================");
 			System.out.println("");
 			int x = 1;
-			for (Entry<String, List<String>> entry : mp.entrySet()) {
+			for (Entry<String, List<String>> entry : fatalExceptionMap.entrySet()) {
 				String k = entry.getKey();
 				List<String> v = entry.getValue();
 				System.out.println("#" + x + ")" + " " + k);
@@ -113,20 +112,32 @@ public class Test {
 
 				x++;
 			}
+			}else{
+				System.out.println("No FATAL Exceptions for this PID!!");
+			}
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Errors");
 			System.out.println("==================");
+			if(errorList.size()>0){
 			System.out.println("");
 			System.out.println("Error Message| # of Occurrences");
-			countFrequencies(al);
+			countFrequencies(errorList);
+			}
+			else{
+				System.out.println("No Errors for this PID!!");
+			}
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Matching Strings");
 			System.out.println("==================");
+			if(matchingStringList.size()>0){
 			System.out.println("");
 			System.out.println("Matching String| # of Occurrences");
-			countFrequencies(al1);
+			countFrequencies(matchingStringList);
+			}else{
+				System.out.println("No Matching Stirng for this PID!!");
+			}
 			myReader.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
